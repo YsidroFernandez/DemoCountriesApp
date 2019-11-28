@@ -7,11 +7,15 @@ namespace countriesApp.Models
 {
     public class RegionalBloc
     {
+
+        #region Attributes
+
         [JsonProperty(PropertyName = "acronym")]
         public string Acronym { get; set; }
 
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
+        #endregion
     }
 }

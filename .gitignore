@@ -1,0 +1,9 @@
+# Ignores
+.vs/
+countriesApp/obj
+countriesApp/bin
+countriesApp.Android/obj
+countriesApp.Android/bin
+countriesApp.iOS/obj
+countriesApp.iOS/bin
+

@@ -7,6 +7,9 @@ namespace countriesApp.Models
 {
     public class Country
     {
+
+        #region Attributes
+
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
@@ -44,10 +47,10 @@ namespace countriesApp.Models
         public string Demonym { get; set; }
 
         [JsonProperty(PropertyName = "area")]
-        public double Area { get; set; }
+        public double? Area { get; set; }
 
         [JsonProperty(PropertyName = "gini")]
-        public double Gini { get; set; }
+        public double? Gini { get; set; }
 
         [JsonProperty(PropertyName = "timezones")]
         public List<string> Timezones { get; set; }
@@ -77,6 +80,8 @@ namespace countriesApp.Models
         public List<RegionalBloc> RegionalBlocs { get; set; }
 
         [JsonProperty(PropertyName = "cioc")]
-        public string Cioc { get; set; }
+        public string Cioc { get; set; } 
+        #endregion
+
     }
 }

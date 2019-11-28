@@ -7,6 +7,8 @@ namespace countriesApp.Models
 {
     public class Language
     {
+        #region Attributes
+
         [JsonProperty(PropertyName = "iso639_1")]
         public string Iso6391 { get; set; }
 
@@ -17,6 +19,7 @@ namespace countriesApp.Models
         public string Name { get; set; }
 
         [JsonProperty(PropertyName = "nativeName")]
-        public string NativeName { get; set; }
+        public string NativeName { get; set; } 
+        #endregion
     }
 }
