@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             mc:Ignorable="d"
+             x:Class="countriesApp.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Login}">
+            <StackLayout 
+                VerticalOptions="CenterAndExpand"
+                Padding="10">
+                <Image
+                    Source="logoApp"
+                    WidthRequest="300"
+                    HeightRequest="200"
+                    ></Image>
+                <Label
+                    Text="Email" 
+                    FontSize="Large"
+                    VerticalOptions="CenterAndExpand"
+                    FontAttributes="Bold"
+                    TextColor="Indigo"                
+                ></Label>
+                <Entry
+                    Text="{Binding Email, Mode=TwoWay}"
+                    Keyboard="Email"
+                    Placeholder="Enter your email...!"    
+                >
+                </Entry>
+                <Label
+                    VerticalOptions="CenterAndExpand"
+                    Text="Password"  
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    TextColor="Indigo"
+                ></Label>
+                <Entry
+                    Text="{Binding Password, Mode=TwoWay}"
+                    IsPassword="True"
+                    Placeholder="Enter your password...!"    
+                >
+                </Entry>
+                <Label
+                    Text="Forgot your password?" 
+                    HorizontalTextAlignment="Center"
+                    FontSize="Large"
+                    TextColor="Blue"
+                    VerticalOptions="CenterAndExpand"
+                ></Label>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
+                    VerticalOptions="CenterAndExpand"
+                    ></ActivityIndicator>
+                <StackLayout 
+                    Margin="10"
+                    VerticalOptions="CenterAndExpand"
+                    >
+                    <Button
+                            VerticalOptions="CenterAndExpand"
+                            Text="Login"
+                            BackgroundColor="Purple"
+                            TextColor="White"
+                            BorderRadius="20"
+                            Command="{Binding LoginCommand}"  
+                            IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                     >
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
