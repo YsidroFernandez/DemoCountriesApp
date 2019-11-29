@@ -41,6 +41,19 @@ namespace countriesApp.ViewModels
 
         private async void LoadCountries()
         {
+
+            var connection = await this.apiService.CheckConnection();
+
+            if (!connection.IsSuccess)
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "ERROR",
+                    connection.Message,
+                    "Accept");
+                await Application.Current.MainPage.Navigation.PopAsync();
+                return;
+            }
+
             var response = await this.apiService.GetList<Country>(
                 "https://restcountries.eu",
                 "/rest",
