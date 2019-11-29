@@ -24,13 +24,13 @@ namespace countriesApp.ViewModels
         private bool isRefreshing;
         private string filter;
         private List<Country> countriesList;
-        private ObservableCollection<Country> country;
+        private ObservableCollection<CountryItemViewModel> country;
 
         #endregion
 
         #region Properties
 
-        public ObservableCollection<Country> Country {
+        public ObservableCollection<CountryItemViewModel> Country {
             get
             {
                 return this.country;
@@ -100,21 +100,52 @@ namespace countriesApp.ViewModels
             }
 
             this.countriesList = (List<Country>)response.Result;
-            this.Country = new ObservableCollection<Country>(this.countriesList);
+            this.Country = new ObservableCollection<CountryItemViewModel>( this.ToItemCountryViewModel() );
             this.IsRefreshing = false;
+        }
+
+        private IEnumerable<CountryItemViewModel> ToItemCountryViewModel()
+        {
+            return this.countriesList.Select(l => new CountryItemViewModel
+            {
+                Alpha2Code = l.Alpha2Code,
+                Alpha3Code = l.Alpha3Code,
+                AltSpellings = l.AltSpellings,
+                Area = l.Area,
+                Borders = l.Borders,
+                CallingCodes = l.CallingCodes,
+                Capital = l.Capital,
+                Cioc = l.Cioc,
+                Currencies = l.Currencies,
+                Demonym = l.Demonym,
+                Flag = l.Flag,
+                Gini = l.Gini,
+                Languages = l.Languages,
+                Latlng = l.Latlng,
+                Name = l.Name,
+                NativeName = l.NativeName,
+                NumericCode = l.NumericCode,
+                Population = l.Population,
+                Region = l.Region,
+                RegionalBlocs = l.RegionalBlocs,
+                Subregion = l.Subregion,
+                Timezones = l.Timezones,
+                TopLevelDomain = l.TopLevelDomain,
+                Translations = l.Translations,
+            });
         }
 
         private void Search()
         {
             if (string.IsNullOrEmpty(this.Filter))
             {
-                this.Country = new ObservableCollection<Country>(this.countriesList);
+                this.Country = new ObservableCollection<CountryItemViewModel>(this.ToItemCountryViewModel());
             }
             else
             {
                 //Busca por nombre del paóis y los compara a minusculas
-                this.Country = new ObservableCollection<Country>(
-                    this.countriesList.Where(
+                this.Country = new ObservableCollection<CountryItemViewModel>(
+                    this.ToItemCountryViewModel().Where(
                         c => c.Name.ToLower().Contains(this.Filter.ToLower()) || c.Capital.ToLower().Contains(this.Filter.ToLower())
                         ));
             }

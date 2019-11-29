@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             mc:Ignorable="d"
+             x:Class="countriesApp.Views.CountryDetailPage"
+             Title="Country">
+    <ContentPage.Content>
+        <ScrollView
+             BindingContext="{Binding CountryDetail}"
+            >
+            <StackLayout
+                Padding="5"
+                >
+                <Label
+                    Text="{Binding CountryDetail.Name}"
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    TextColor="Indigo"
+                    HorizontalOptions="CenterAndExpand"
+                    >
+                    
+                </Label>
+                <!--<ffimageloading:CachedImage 
+                    Source="{Binding Land.Flag, Converter={StaticResource SvgImageSourceConverter}}">
+                </ffimageloading:CachedImage>-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Capital"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Capital}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Population"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Population, StringFormat='{0:N0}'}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Area"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Area, StringFormat='{0:N0}'}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="AlphaCode2"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Alpha2Code}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="AlphaCode3"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Alpha3Code}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="Region"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Region}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="6"
+                        Text="Subregion"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Subregion}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="7"
+                        Text=" Demonym"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="7"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Demonym}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="8"
+                        Text=" GINI"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="8"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Gini, StringFormat='{0:N2}'}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="9"
+                        Text=" NativeName"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="9"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.NativeName}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="10"
+                        Text=" NumericCode"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="10"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.NumericCode}"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="11"
+                        Text="CIOC"
+                        TextColor="Indigo">
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="11"
+                        FontAttributes="Bold"
+                        Text="{Binding CountryDetail.Cioc}"
+                        TextColor="Indigo">
+                    </Label>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

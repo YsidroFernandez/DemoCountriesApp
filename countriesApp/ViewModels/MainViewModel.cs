@@ -18,6 +18,17 @@ namespace countriesApp.ViewModels
             set;
         }
 
+        public CountryDetailViewModel CountryDetail { 
+            get; 
+            set;
+        }
+
+        public CountryItemViewModel CountryItem
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region Constructors

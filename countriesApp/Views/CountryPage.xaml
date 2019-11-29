@@ -5,10 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              mc:Ignorable="d"
-             x:Class="countriesApp.Views.CountryPage">
+             x:Class="countriesApp.Views.CountryPage"
+             Title="Countries">
     <ContentPage.Content>
         <StackLayout 
-            BindingContext="{Binding Country}">
+                BindingContext="{Binding Country}">
             <Label
                 Text="Countries"
                 TextColor="Indigo"
@@ -19,9 +20,11 @@
                 Text="{Binding Filter, Mode=TwoWay}"
                 Placeholder="Search..."
                 SearchCommand="{Binding SearchCommand}"
+                BackgroundColor="MediumPurple"
+                Margin="5"
                 ></SearchBar>
             <ListView 
-                BackgroundColor="Silver"
+                BackgroundColor="MediumPurple"
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
@@ -37,7 +40,7 @@
                                 HasShadow="true"
                                 Margin="5">
                                 <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SelectLandCommand}"/>
+                                    <TapGestureRecognizer Command="{Binding SelectCountryCommand}"/>
                                 </Frame.GestureRecognizers>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
