@@ -14,6 +14,7 @@ namespace countriesApp.ViewModels
 
         private ObservableCollection<Borders> borders;
         private ObservableCollection<Currency> currencies;
+        private ObservableCollection<Language> languages;
         #endregion
 
         #region Properties
@@ -46,6 +47,18 @@ namespace countriesApp.ViewModels
                 SetValue(ref this.currencies, value);
             }
         }
+
+        public ObservableCollection<Language> Languages
+        {
+            get
+            {
+                return this.languages;
+            }
+            set
+            {
+                SetValue(ref this.languages, value);
+            }
+        }
         #endregion
 
         #region Constructors
@@ -54,6 +67,7 @@ namespace countriesApp.ViewModels
             this.CountryDetail = country;
             this.LoadBorders();
             this.Currencies = new ObservableCollection<Currency>(this.CountryDetail.Currencies);
+            this.Languages = new ObservableCollection<Language>(this.CountryDetail.Languages);
         }
 
         #endregion
