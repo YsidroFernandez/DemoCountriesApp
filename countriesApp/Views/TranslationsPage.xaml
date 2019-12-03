@@ -9,10 +9,172 @@
              IconImageSource="ic_translate"
              Title="Translations">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Translations"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+            BindingContext="{Binding CountryDetail}"
+            Padding="10">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="{Binding CountryDetail.Name}"
+                TextColor="Indigo">
+            </Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="German"
+                    FontSize="Medium"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    Text="{Binding CountryDetail.Translations.Germany}"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="Spanish"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    FontAttributes="Bold"
+                    Text="{Binding CountryDetail.Translations.Spanish}"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Text="French"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{Binding CountryDetail.Translations.French}"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Text="Japanese"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{Binding CountryDetail.Translations.Japanese}"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Text="Italian"
+                    FontSize="Medium"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{Binding CountryDetail.Translations.Italian}"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    Text="Brazilian"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    FontAttributes="Bold"
+                    Text="{Binding CountryDetail.Translations.Brazilian}"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    FontSize="Medium"
+                    Text="Portuguese"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{Binding CountryDetail.Translations.Portuges}"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    Text="Dutch"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{Binding CountryDetail.Translations.Dutch}"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="8"
+                    Text="Croatian"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="8"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{Binding CountryDetail.Translations.Croatian}"
+                    TextColor="Indigo">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="9"
+                    Text=" Persian"
+                    TextColor="Indigo"
+                    FontSize="Medium">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="9"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="{Binding CountryDetail.Translations.Persian}"
+                    TextColor="Indigo">
+                </Label>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

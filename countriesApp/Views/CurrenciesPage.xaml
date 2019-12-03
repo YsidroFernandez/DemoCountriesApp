@@ -9,10 +9,53 @@
              IconImageSource="ic_attach_money"
              Title="Currencies">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Currencies"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+            Padding="10"
+            BindingContext="{Binding CountryDetail}">
+            <Label
+                Text="{Binding CountryDetail.Name}"
+                FontSize="Title"
+                FontAttributes="Bold"
+                TextColor="Indigo"
+                HorizontalOptions="CenterAndExpand"
+            >
+            </Label>
+            <ListView
+                ItemsSource="{Binding Currencies}"
+                HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label 
+                                    Grid.Column="0"
+                                    FontAttributes="Bold"
+                                    FontSize="Medium" 
+                                    Text="{Binding Code}"
+                                    TextColor="Indigo">
+                                </Label>
+                                <Label 
+                                    Grid.Column="1"
+                                    Text="{Binding Name}"
+                                    TextColor="Indigo"
+                                    FontSize="Medium" >
+                                </Label>
+                                <Label 
+                                    Grid.Column="2"
+                                    Text="{Binding Symbol}"
+                                    TextColor="Indigo"
+                                    FontSize="Medium" >
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
