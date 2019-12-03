@@ -6,7 +6,8 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              mc:Ignorable="d"
              x:Class="countriesApp.Views.CountryPage"
-             Title="Countries">
+             Title="Countries"
+            >
     <ContentPage.Content>
         <StackLayout 
                 BindingContext="{Binding Country}">
@@ -60,11 +61,11 @@
                                             FontAttributes="Bold"
                                             FontSize="Medium" 
                                             Text="{Binding Name}"
-                                            TextColor="Black">
+                                            TextColor="Indigo">
                                         </Label>
                                         <Label 
                                             Text="{Binding Capital}"
-                                            TextColor="Black">
+                                            TextColor="Indigo">
                                         </Label>
                                     </StackLayout>
                                     <Image 

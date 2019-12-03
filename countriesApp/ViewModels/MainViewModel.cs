@@ -1,4 +1,5 @@
 ﻿
+using countriesApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +8,14 @@ namespace countriesApp.ViewModels
 {
     public class MainViewModel
     {
+        #region Properties
+
+        public List <Country> countriesList {
+            get;
+            set;
+        }
+        #endregion
+
         #region ViewModels
         public LoginViewModel Login {
             get;

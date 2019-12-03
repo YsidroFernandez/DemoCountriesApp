@@ -28,7 +28,7 @@ namespace countriesApp.ViewModels
         private async void SelectCountry()
         {
             MainViewModel.GetInstance().CountryDetail = new CountryDetailViewModel(this);
-            await Application.Current.MainPage.Navigation.PushAsync(new CountryDetailPage());
+            await Application.Current.MainPage.Navigation.PushAsync(new CountryTabbedPage());
         }
         #endregion
     }

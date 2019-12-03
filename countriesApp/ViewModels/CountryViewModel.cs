@@ -23,7 +23,6 @@ namespace countriesApp.ViewModels
         #region Attributes
         private bool isRefreshing;
         private string filter;
-        private List<Country> countriesList;
         private ObservableCollection<CountryItemViewModel> country;
 
         #endregion
@@ -99,14 +98,14 @@ namespace countriesApp.ViewModels
                 return;
             }
 
-            this.countriesList = (List<Country>)response.Result;
+            MainViewModel.GetInstance().countriesList = (List<Country>)response.Result;
             this.Country = new ObservableCollection<CountryItemViewModel>( this.ToItemCountryViewModel() );
             this.IsRefreshing = false;
         }
 
         private IEnumerable<CountryItemViewModel> ToItemCountryViewModel()
         {
-            return this.countriesList.Select(l => new CountryItemViewModel
+            return MainViewModel.GetInstance().countriesList.Select(l => new CountryItemViewModel
             {
                 Alpha2Code = l.Alpha2Code,
                 Alpha3Code = l.Alpha3Code,
