@@ -17,7 +17,7 @@
                 FontSize="Large"
                 HorizontalOptions="Center"
                 Text="{Binding CountryDetail.Name}"
-                TextColor="Indigo">
+                TextColor="Black">
             </Label>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -29,21 +29,21 @@
                     Grid.Row="0"
                     Text="German"
                     FontSize="Medium"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="1"
                     Grid.Row="0"
                     FontAttributes="Bold"
                     Text="{Binding CountryDetail.Translations.Germany}"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="1"
                     Text="Spanish"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -51,14 +51,14 @@
                     Grid.Row="1"
                     FontAttributes="Bold"
                     Text="{Binding CountryDetail.Translations.Spanish}"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="2"
                     Text="French"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -67,13 +67,13 @@
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="{Binding CountryDetail.Translations.French}"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="3"
                     Text="Japanese"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -82,14 +82,14 @@
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="{Binding CountryDetail.Translations.Japanese}"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="4"
                     Text="Italian"
                     FontSize="Medium"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="1"
@@ -97,13 +97,13 @@
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="{Binding CountryDetail.Translations.Italian}"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="5"
                     Text="Brazilian"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -111,7 +111,7 @@
                     Grid.Row="5"
                     FontAttributes="Bold"
                     Text="{Binding CountryDetail.Translations.Brazilian}"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -119,7 +119,7 @@
                     Grid.Row="6"
                     FontSize="Medium"
                     Text="Portuguese"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="1"
@@ -127,13 +127,13 @@
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="{Binding CountryDetail.Translations.Portuges}"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="7"
                     Text="Dutch"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -142,13 +142,13 @@
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="{Binding CountryDetail.Translations.Dutch}"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="8"
                     Text="Croatian"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -157,13 +157,13 @@
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="{Binding CountryDetail.Translations.Croatian}"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
                 <Label
                     Grid.Column="0"
                     Grid.Row="9"
                     Text=" Persian"
-                    TextColor="Indigo"
+                    TextColor="Black"
                     FontSize="Medium">
                 </Label>
                 <Label
@@ -172,7 +172,7 @@
                     FontAttributes="Bold"
                     FontSize="Medium"
                     Text="{Binding CountryDetail.Translations.Persian}"
-                    TextColor="Indigo">
+                    TextColor="Black">
                 </Label>
             </Grid>
         </StackLayout>

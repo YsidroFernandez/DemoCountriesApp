@@ -3,17 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              mc:Ignorable="d"
              x:Class="countriesApp.Views.CountryPage"
              Title="Countries"
             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ffimageloadingsvg:SvgImageSourceConverter 
+                x:Key="SvgImageSourceConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout 
                 BindingContext="{Binding Country}">
             <Label
                 Text="Countries"
-                TextColor="Indigo"
+                TextColor="Black"
                 FontAttributes="Bold"
                 HorizontalOptions="CenterAndExpand"
                 FontSize="Title"></Label>
@@ -21,11 +30,11 @@
                 Text="{Binding Filter, Mode=TwoWay}"
                 Placeholder="Search..."
                 SearchCommand="{Binding SearchCommand}"
-                BackgroundColor="MediumPurple"
+                BackgroundColor="CornflowerBlue"
                 Margin="5"
                 ></SearchBar>
             <ListView 
-                BackgroundColor="MediumPurple"
+                BackgroundColor="CornflowerBlue"
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
@@ -39,37 +48,39 @@
                             <Frame
                                 CornerRadius="20"
                                 HasShadow="true"
-                                Margin="5">
+                                Margin="5"
+                                BackgroundColor="LightGray">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding SelectCountryCommand}"/>
                                 </Frame.GestureRecognizers>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
                                         <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <!--<ffimageloading:CachedImage 
-                                        Grid.Column="0"
-                                        HeightRequest="30"
-                                        Source="{Binding Flag, Converter={StaticResource SvgImageSourceConverter}}"
-                                        WidthRequest="60">
-                                    </ffimageloading:CachedImage>-->
+                                    <ffimageloading:CachedImage 
+                                            Grid.Column="0"
+                                            HeightRequest="30"
+                                            Source="{Binding Flag, Converter={StaticResource SvgImageSourceConverter}}"
+                                            WidthRequest="40">
+                                    </ffimageloading:CachedImage>
                                     <StackLayout 
-                                        Grid.Column="0"
+                                        Grid.Column="1"
                                         VerticalOptions="Center">
                                         <Label 
                                             FontAttributes="Bold"
                                             FontSize="Medium" 
                                             Text="{Binding Name}"
-                                            TextColor="Indigo">
+                                            TextColor="Black">
                                         </Label>
                                         <Label 
                                             Text="{Binding Capital}"
-                                            TextColor="Indigo">
+                                            TextColor="Black">
                                         </Label>
                                     </StackLayout>
                                     <Image 
-                                        Grid.Column="1"
+                                        Grid.Column="2"
                                         HorizontalOptions="End" 
                                         Source="ic_chevron_right">
                                     </Image>

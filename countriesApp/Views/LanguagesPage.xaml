@@ -16,7 +16,7 @@
                 Text="{Binding CountryDetail.Name}"
                 FontSize="Title"
                 FontAttributes="Bold"
-                TextColor="Indigo"
+                TextColor="Black"
                 HorizontalOptions="CenterAndExpand"
             >
             </Label>
@@ -37,18 +37,18 @@
                                     FontAttributes="Bold"
                                     FontSize="Medium" 
                                     Text="{Binding Iso6392}"
-                                    TextColor="Indigo">
+                                    TextColor="Black">
                                 </Label>
                                 <Label 
                                     Grid.Column="1"
                                     Text="{Binding Name}"
-                                    TextColor="Indigo"
+                                    TextColor="Black"
                                     FontSize="Medium" >
                                 </Label>
                                 <Label 
                                     Grid.Column="2"
                                     Text="{Binding NativeName}"
-                                    TextColor="Indigo"
+                                    TextColor="Black"
                                     FontSize="Medium" >
                                 </Label>
                             </Grid>

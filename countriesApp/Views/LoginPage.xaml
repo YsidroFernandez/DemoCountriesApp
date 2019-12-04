@@ -22,7 +22,7 @@
                     FontSize="Large"
                     VerticalOptions="CenterAndExpand"
                     FontAttributes="Bold"
-                    TextColor="Indigo"                
+                    TextColor="Black"                
                 ></Label>
                 <Entry
                     Text="{Binding Email, Mode=TwoWay}"
@@ -35,7 +35,7 @@
                     Text="Password"  
                     FontSize="Large"
                     FontAttributes="Bold"
-                    TextColor="Indigo"
+                    TextColor="Black"
                 ></Label>
                 <Entry
                     Text="{Binding Password, Mode=TwoWay}"
@@ -61,7 +61,7 @@
                     <Button
                             VerticalOptions="CenterAndExpand"
                             Text="Login"
-                            BackgroundColor="Purple"
+                            BackgroundColor="CornflowerBlue"
                             TextColor="White"
                             BorderRadius="20"
                             Command="{Binding LoginCommand}"  
