@@ -3,11 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              mc:Ignorable="d"
              x:Class="countriesApp.Views.CountryDetailPage"
-             Icon="ic_info_outline"
+             IconImageSource="baseline_info_black_48"
              Title="Information">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ffimageloadingsvg:SvgImageSourceConverter 
+                x:Key="SvgImageSourceConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView
              BindingContext="{Binding CountryDetail}"
@@ -22,11 +31,15 @@
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
                     >
-                    
+
                 </Label>
-                <!--<ffimageloading:CachedImage 
-                    Source="{Binding Land.Flag, Converter={StaticResource SvgImageSourceConverter}}">
-                </ffimageloading:CachedImage>-->
+                <ffimageloading:CachedImage 
+                    Grid.Column="0"
+                    HeightRequest="100"
+                    WidthRequest="150"
+                    Source="{Binding CountryDetail.Flag, Converter={StaticResource SvgImageSourceConverter}}"
+                 >
+                </ffimageloading:CachedImage>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>

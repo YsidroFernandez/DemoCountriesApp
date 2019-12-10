@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             IconImageSource="ic_public"
+             IconImageSource="baseline_public_black_48"
              mc:Ignorable="d"
              x:Class="countriesApp.Views.BordersPage"
              Title="Borders">

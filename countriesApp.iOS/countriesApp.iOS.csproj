@@ -155,18 +155,18 @@
     <BundleResource Include="Resources\ic_chevron_right.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_attach_money.png" />
+    <BundleResource Include="Resources\baseline_attach_money_black_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_info_outline.png" />
+    <BundleResource Include="Resources\baseline_info_black_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_language.png" />
+    <BundleResource Include="Resources\baseline_language_black_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_public.png" />
+    <BundleResource Include="Resources\baseline_public_black_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\ic_translate.png" />
+    <BundleResource Include="Resources\baseline_translate_black_48.png" />
   </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              mc:Ignorable="d"
              x:Class="countriesApp.Views.LanguagesPage"
-             Icon="ic_language"
+             IconImageSource="baseline_language_black_48"
              Title="Languages">
     <ContentPage.Content>
         <StackLayout

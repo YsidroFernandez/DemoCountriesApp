@@ -6,7 +6,7 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              mc:Ignorable="d"
              x:Class="countriesApp.Views.CurrenciesPage"
-             IconImageSource="ic_attach_money"
+             IconImageSource="baseline_attach_money_black_48"
              Title="Currencies">
     <ContentPage.Content>
         <StackLayout
